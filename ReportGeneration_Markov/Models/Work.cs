@@ -19,7 +19,6 @@ namespace ReportGeneration_Markov.Models
         public string Name { get; set; }
 
         public int Semester { get; set; }
-    }
 
     public Work(int Id, int IdDiscipline, int IdType, DateTime Date, string Name, int Semester)
         {
