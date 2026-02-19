@@ -10,10 +10,8 @@ using MySql.Data.MySqlClient;
 
 namespace ReportGeneration_Markov.Classes
 {
-    class StudentContext : Student
+    public class StudentContext : Student
     {
-        /// <summary> Конструктор для контекста студента
-        /// ССЫЛКА: 1
         public StudentContext(int Id, string Firstname, string Lastname, int IdGroup, bool Expelled, DateTime DateExpelled) :
             base(Id, Firstname, Lastname, IdGroup, Expelled, DateExpelled) { }
 
