@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ReportGeneration_Markov.Classes;
+using ReportGeneration_Markov.Items;
 
 namespace ReportGeneration_Markov.Pages
 {
@@ -59,9 +60,16 @@ namespace ReportGeneration_Markov.Pages
             if (CBGroups.SelectedIndex != CBGroups.Items.Count - 1)
             {
                 int IdGroup = AllGroups.Find(x => x.Name == CBGroups.SelectedItem).Id;
-                SearchStudent = AllStudents.FindAll(x => x.Id.Group == IdGroup;
+                SearchStudent = AllStudents.FindAll(x => x.Id.Group == IdGroup);
             }
             CreateStudents(SearchStudent.FindAll(x => $"{x.Lastname} {x.Firstname}".Contains(TBFIO.Text)));
+        }
+        private void ReportGeneration(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (CBGroups.SelectedIndex != CBGroups.Items.Count - 1)
+            {
+                int idGroup = AllGroups.Find(x => x.Name == CBGroups.SelectedItem).Id;
+                Classes.Common.Report.Group(idGroup, this);
             }
         }
     }
