@@ -9,7 +9,7 @@ namespace ReportGeneration_Markov.Classes.Common
 {
     public class Connection
     {
-        public static string config = "server=127.0.0.1;uid=root;pwd=root;database=journal";
+        public static string config = "server=127.0.0.1;uid=root;pwd=;database=journal";
 
         public static MySqlConnection OpenConnection()
         {
